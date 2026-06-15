@@ -1,0 +1,281 @@
+{
+  "postgres_products": [
+    {
+      "id": "prod_gra001",
+      "sku": "GRA-001",
+      "name": "Nueces Mariposa Peladas",
+      "sell_type": "weight",
+      "price": 12000,
+      "stock": 25.5,
+      "description": "Nueces mariposa seleccionadas, frescas y crujientes.",
+      "image_url": "nuts"
+    },
+    {
+      "id": "prod_gra002",
+      "sku": "GRA-002",
+      "name": "Almendras Enteras Nonpareil",
+      "sell_type": "weight",
+      "price": 14000,
+      "stock": 18.25,
+      "description": "Almendras naturales de calibre gigante.",
+      "image_url": "almonds"
+    },
+    {
+      "id": "prod_gra003",
+      "sku": "prod_gra003",
+      "sku_alt": "GRA-003",
+      "sku": "GRA-003",
+      "name": "Castañas de Cajú Tostadas",
+      "sell_type": "weight",
+      "price": 16500,
+      "stock": 10.8,
+      "description": "Castañas de cajú sin sal, tostadas al horno.",
+      "image_url": "cashews"
+    },
+    {
+      "id": "prod_gra004",
+      "sku": "GRA-004",
+      "name": "Semillas de Zapallo",
+      "sell_type": "weight",
+      "price": 8900,
+      "stock": 30.0,
+      "description": "Semillas de zapallo peladas listas para consumo.",
+      "image_url": "pumpkin-seeds"
+    },
+    {
+      "id": "prod_gra005",
+      "sku": "GRA-005",
+      "name": "Harina de Avena Integral",
+      "sell_type": "weight",
+      "price": 3500,
+      "stock": 45.0,
+      "description": "Avena integral molida ultra fina.",
+      "image_url": "oat-flour"
+    },
+    {
+      "id": "prod_env001",
+      "sku": "ENV-001",
+      "name": "Aceite de Coco Orgánico 500ml",
+      "sell_type": "unit",
+      "price": 7990,
+      "stock": 15.0,
+      "description": "Aceite de coco extra virgen prensado en frío.",
+      "image_url": "coconut-oil"
+    },
+    {
+      "id": "prod_env002",
+      "sku": "ENV-002",
+      "name": "Miel de Abeja Pura 1kg",
+      "sell_type": "unit",
+      "price": 9500,
+      "stock": 8.0,
+      "description": "Miel artesanal del sur de Chile, 100% natural.",
+      "image_url": "honey"
+    },
+    {
+      "id": "prod_env003",
+      "sku": "ENV-003",
+      "name": "Crema de Maní Natural 400g",
+      "sell_type": "unit",
+      "price": 4890,
+      "stock": 22.0,
+      "description": "Crema de maní pura, sin azúcar añadida.",
+      "image_url": "peanut-butter"
+    },
+    {
+      "id": "prod_env004",
+      "sku": "ENV-004",
+      "name": "Té Verde Matcha Orgánico 100g",
+      "sell_type": "unit",
+      "price": 11990,
+      "stock": 12.0,
+      "description": "Matcha japonés de grado ceremonial.",
+      "image_url": "matcha"
+    },
+    {
+      "id": "prod_env005",
+      "sku": "ENV-005",
+      "name": "Chips de Banana Deshidratada 250g",
+      "sell_type": "unit",
+      "price": 3200,
+      "stock": 35.0,
+      "description": "Crujientes rodajas de banana deshidratada.",
+      "image_url": "banana-chips"
+    }
+  ],
+  "mongodb_product_details": [
+    {
+      "sku": "GRA-001",
+      "category": "nueces",
+      "origin": "Valle del Maipo, Chile",
+      "nutrition": {
+        "calories": 654,
+        "carbohydrates": 14,
+        "protein": 15,
+        "fat": 65,
+        "fiber": 7
+      },
+      "allergens": ["nueces"],
+      "tags": ["Premium", "Sin Sal", "Energía", "Keto"],
+      "packaging_info": "Bolsa kraft compostable con zipper de sellado hermético.",
+      "rating": 4.8,
+      "reviews_count": 34
+    },
+    {
+      "sku": "GRA-002",
+      "category": "almendras",
+      "origin": "Región Metropolitana, Chile",
+      "nutrition": {
+        "calories": 579,
+        "carbohydrates": 22,
+        "protein": 21,
+        "fat": 49,
+        "fiber": 12
+      },
+      "allergens": ["almendras"],
+      "tags": ["Natural", "Calcio", "Snack", "Fibra"],
+      "packaging_info": "Bolsa kraft compostable hermética.",
+      "rating": 4.9,
+      "reviews_count": 48
+    },
+    {
+      "sku": "GRA-003",
+      "category": "anacardos",
+      "origin": "Nordeste de Brasil",
+      "nutrition": {
+        "calories": 553,
+        "carbohydrates": 30,
+        "protein": 18,
+        "fat": 44,
+        "fiber": 3
+      },
+      "allergens": ["anacardos"],
+      "tags": ["Tostado", "Minerales", "Cremoso"],
+      "packaging_info": "Empaque de papel reciclable con ventana bio-degradable.",
+      "rating": 4.7,
+      "reviews_count": 29
+    },
+    {
+      "sku": "GRA-004",
+      "category": "semillas",
+      "origin": "Región del Biobío, Chile",
+      "nutrition": {
+        "calories": 559,
+        "carbohydrates": 10,
+        "protein": 30,
+        "fat": 49,
+        "fiber": 6
+      },
+      "allergens": [],
+      "tags": ["Zinc", "Superalimento", "Ensaladas"],
+      "packaging_info": "Envase kraft resellable.",
+      "rating": 4.6,
+      "reviews_count": 18
+    },
+    {
+      "sku": "GRA-005",
+      "category": "harinas",
+      "origin": "Región de la Araucanía, Chile",
+      "nutrition": {
+        "calories": 379,
+        "carbohydrates": 66,
+        "protein": 13,
+        "fat": 7,
+        "fiber": 10
+      },
+      "allergens": ["gluten (trazas)"],
+      "tags": ["Desayuno", "Repostería", "Saludable"],
+      "packaging_info": "Saco de papel ecológico de alta resistencia.",
+      "rating": 4.5,
+      "reviews_count": 22
+    },
+    {
+      "sku": "ENV-001",
+      "category": "aceites",
+      "origin": "Sri Lanka",
+      "nutrition": {
+        "calories": 862,
+        "carbohydrates": 0,
+        "protein": 0,
+        "fat": 100,
+        "fiber": 0
+      },
+      "allergens": [],
+      "tags": ["Orgánico", "Prensado en Frío", "Keto", "Vegano"],
+      "packaging_info": "Frasco de vidrio ámbar reciclable con tapa sellada.",
+      "rating": 4.9,
+      "reviews_count": 56
+    },
+    {
+      "sku": "ENV-002",
+      "category": "endulzantes",
+      "origin": "Frutillar, Chile",
+      "nutrition": {
+        "calories": 304,
+        "carbohydrates": 82,
+        "protein": 0.3,
+        "fat": 0,
+        "fiber": 0
+      },
+      "allergens": [],
+      "tags": ["Artesanal", "100% Pura", "Endulzante Natural"],
+      "packaging_info": "Frasco de vidrio premium reutilizable con sello de cera.",
+      "rating": 5.0,
+      "reviews_count": 73
+    },
+    {
+      "sku": "ENV-003",
+      "category": "almendras",
+      "origin": "Región de Valparaíso, Chile",
+      "nutrition": {
+        "calories": 588,
+        "carbohydrates": 20,
+        "protein": 25,
+        "fat": 50,
+        "fiber": 8
+      },
+      "allergens": ["maní"],
+      "tags": ["Sin Azúcar", "Proteico", "Untable"],
+      "packaging_info": "Pote de vidrio hermético de boca ancha.",
+      "rating": 4.8,
+      "reviews_count": 41
+    },
+    {
+      "sku": "ENV-004",
+      "category": "endulzantes",
+      "origin": "Uji, Kyoto, Japón",
+      "nutrition": {
+        "calories": 320,
+        "carbohydrates": 38,
+        "protein": 30,
+        "fat": 5,
+        "fiber": 28
+      },
+      "allergens": [],
+      "tags": ["Ceremonial", "Antioxidantes", "Calma", "Concentración"],
+      "packaging_info": "Lata metálica hermética con sello protector de frescura.",
+      "rating": 4.9,
+      "reviews_count": 38
+    },
+    {
+      "sku": "ENV-005",
+      "category": "deshidratados",
+      "origin": "Ecuador",
+      "nutrition": {
+        "calories": 519,
+        "carbohydrates": 58,
+        "protein": 2.3,
+        "fat": 33,
+        "fiber": 7.7
+      },
+      "allergens": [],
+      "tags": ["Crujiente", "Snack Niño", "Potasio"],
+      "packaging_info": "Bolsa metalizada hermética resellable.",
+      "rating": 4.4,
+      "reviews_count": 15
+    }
+  ],
+  "postgres_orders": [],
+  "postgres_order_items": [],
+  "mongodb_orders_analytics": []
+}

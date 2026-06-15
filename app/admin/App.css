@@ -1,0 +1,368 @@
+/* Estilos del Dashboard Corporativo Rofex */
+
+.app-layout-dashboard {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #f3f4f6; /* Fondo gris claro premium de la app */
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Barra Lateral (Sidebar) */
+.rofex-sidebar {
+  width: 260px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px 16px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.01);
+}
+
+/* Marca / Logotipo de Rofex */
+.sidebar-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  padding-left: 8px;
+  user-select: none;
+}
+
+/* Icono Rofex en cubo */
+.rofex-logo-icon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px;
+  width: 26px;
+  height: 26px;
+  transform: rotate(45deg);
+}
+
+.rofex-logo-icon .cube {
+  background-color: #e5e7eb;
+  border-radius: 2px;
+}
+
+.rofex-logo-icon .cube.green {
+  background-color: #10b981; /* Verde Rofex */
+}
+
+/* Menú de Barra Lateral */
+.sidebar-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  padding-right: 2px;
+}
+
+.sidebar-nav-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav-menu::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+.sidebar-nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.sidebar-nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  color: var(--text-primary);
+}
+
+.sidebar-nav-btn.active {
+  background-color: rgba(16, 185, 129, 0.08); /* Fondo verde claro */
+  color: #059669; /* Letras verde Rofex */
+  font-weight: 700;
+}
+
+/* Tarjeta del Plan Actual */
+.sidebar-plan-card {
+  background-color: #fbfbfb;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+}
+
+.plan-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.plan-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.plan-badge-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.plan-name {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.plan-price {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ef4444; /* Rojo precio */
+}
+
+.plan-days-rest {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.plan-card-body-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.progress-track-bg {
+  background-color: #e5e7eb;
+  height: 5px;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.progress-bar-fill.orange-bar { background-color: #f97316; }
+.progress-bar-fill.green-bar { background-color: #10b981; }
+
+.btn-upgrade-plan-sidebar {
+  background-color: #10b981; /* Botón verde */
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.btn-upgrade-plan-sidebar:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+/* Botón de Salir */
+.sidebar-footer-exit {
+  margin-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 12px;
+}
+
+.btn-exit-sidebar {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.btn-exit-sidebar:hover {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+/* Panel de Contenido Principal (Derecha) */
+.main-content-wrapper {
+  margin-left: 260px; /* Desplazar ancho del sidebar */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: calc(100vw - 260px);
+}
+
+/* Barra Superior (Topbar) */
+.main-topbar {
+  background-color: #ffffff;
+  height: 56px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.topbar-right-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-mode-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.btn-mode-toggle:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.profile-text-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.profile-username {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profile-user-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.profile-avatar-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #3b82f6; /* Azul avatar Felipe */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+/* Área de despliegue de Vistas */
+.view-viewport-content {
+  flex-grow: 1;
+  padding: 12px;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+/* Modo Oscuro Básico (Opcional, para el toggle de UI) */
+.app-layout-dashboard.dark-mode {
+  --bg-body: #111827;
+  --bg-card: #1f2937;
+  --bg-header: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.08);
+  background-color: #111827;
+}
+
+.app-layout-dashboard.dark-mode .rofex-sidebar,
+.app-layout-dashboard.dark-mode .main-topbar {
+  background-color: #1f2937;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-layout-dashboard.dark-mode .sidebar-plan-card {
+  background-color: #1f2937;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.app-layout-dashboard.dark-mode .sidebar-nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Media Query para Colapso de Sidebar en pantallas chicas */
+@media (max-width: 900px) {
+  .rofex-sidebar {
+    width: 70px;
+    padding: 20px 8px;
+  }
+  .rofex-sidebar strong,
+  .rofex-sidebar span,
+  .sidebar-plan-card,
+  .rofex-logo-icon + strong {
+    display: none;
+  }
+  .sidebar-nav-btn {
+    justify-content: center;
+    padding: 12px;
+  }
+  .main-content-wrapper {
+    margin-left: 70px;
+    width: calc(100vw - 70px);
+  }
+}
