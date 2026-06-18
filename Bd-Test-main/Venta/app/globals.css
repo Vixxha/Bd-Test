@@ -1,0 +1,177 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap');
+
+:root {
+  /* Paleta Naranja Claro y Blanco (Tema Claro Boutique) */
+  --bg-body: #faf9f6; /* Blanco hueso suave */
+  --bg-card: #ffffff; /* Blanco puro */
+  --bg-header: #f4f2ee;
+  
+  --primary-color: #10b981; /* Verde esmeralda Rofex */
+  --primary-hover: #059669; /* Verde esmeralda oscuro */
+  --accent-color: #10b981;  /* Esmeralda para éxito */
+  --accent-hover: #059669;
+  
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-focus: rgba(16, 185, 129, 0.4);
+  
+  --text-primary: #18181b;   /* Zinc 900 */
+  --text-secondary: #52525b; /* Zinc 600 */
+  --text-muted: #71717a;     /* Zinc 500 */
+  
+  /* Tipografías */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
+  
+  color-scheme: light;
+}
+
+/* Reset de Estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Utilidades de Texto */
+.gradient-text {
+  background: linear-gradient(135deg, #fdba74 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-center { text-align: center; }
+.text-muted { color: var(--text-muted); }
+.text-sm { font-size: 0.8rem; }
+.text-primary { color: var(--primary-color) !important; }
+
+/* Botones Corporativos Premium */
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+}
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: var(--border-focus);
+}
+
+.btn-primary:disabled, .btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* Modificadores de Botón */
+.btn-block {
+  width: 100%;
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.btn-icon {
+  gap: 8px;
+}
+
+/* Formularios */
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.15);
+}
+
+/* Efecto Spinner de Carga */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

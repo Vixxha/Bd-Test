@@ -1,0 +1,87 @@
+/* Estilos para Proveedores */
+
+.suppliers-view-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.suppliers-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.add-supplier-form {
+  background: var(--bg-card);
+  border: 1px solid #10b981;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.05);
+}
+
+.add-supplier-form h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #10b981;
+}
+
+.suppliers-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.suppliers-table th {
+  background: var(--bg-header);
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.suppliers-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  color: var(--text-primary);
+}
+
+.sup-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-person-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.contact-info-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.supplier-category-tags {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #059669;
+}

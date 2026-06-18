@@ -1,0 +1,105 @@
+/* Estilos para Vendedores y Cajeros */
+
+.vendors-view-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vendors-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.add-vendor-form {
+  background: var(--bg-card);
+  border: 1px solid #10b981;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.05);
+}
+
+.add-vendor-form h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #10b981;
+}
+
+.vendors-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.vendors-table th {
+  background: var(--bg-header);
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vendors-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+  color: var(--text-primary);
+}
+
+.user-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-circle-sm {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.role-badge.admin { background: rgba(59, 130, 246, 0.08); color: #2563eb; }
+.role-badge.cashier { background: rgba(168, 85, 247, 0.08); color: #7c3aed; }
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.status-badge.active { background: rgba(16, 185, 129, 0.08); color: #059669; }
+.status-badge.inactive { background: rgba(239, 68, 68, 0.08); color: #dc2626; }
+
+.btn-status-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+}

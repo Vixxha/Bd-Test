@@ -1,0 +1,1424 @@
+/* Estilos del módulo CRM & Power BI - Versión Pro Interactiva */
+
+.crm-powerbi-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Encabezado y Navegación de Pestañas */
+.crm-pbi-header {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.crm-pbi-header h2 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin: 0 0 6px 0;
+  font-weight: 800;
+}
+
+.crm-pbi-header .subtitle {
+  font-size: 0.88rem;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+.crm-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.crm-tab-btn {
+  background: none;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crm-tab-btn:hover {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.crm-tab-btn.active {
+  color: #059669;
+  border-bottom-color: #059669;
+  font-weight: 700;
+}
+
+/* Contenido Principal de Pestañas */
+.crm-tab-content {
+  min-height: 400px;
+}
+
+/* =========================================================
+   RECONCILIACIÓN Y PAREO DE CRM (CON PANEL DE REGLAS)
+   ========================================================= */
+.reconciliation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 1200px) {
+  .reconciliation-grid {
+    grid-template-columns: 340px 1fr;
+  }
+}
+
+.importer-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.importer-card h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Panel de Reglas Configurables */
+.rules-panel {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rules-panel h4 {
+  font-size: 0.78rem;
+  color: #374151;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #4b5563;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rule-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #10b981;
+}
+
+.rule-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.rule-input-group label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.rule-input {
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+.dropzone-crm {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropzone-crm:hover {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.dropzone-crm .icon {
+  color: #9ca3af;
+}
+
+.dropzone-crm p {
+  font-size: 0.78rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.dropzone-crm span {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.or-divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.or-divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.btn-simulate {
+  width: 100%;
+  padding: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.results-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.results-header-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 16px;
+}
+
+@media (min-width: 640px) {
+  .results-header-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.results-header-row h3 {
+  font-size: 1.15rem;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+.results-actions-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* Tarjetas de estadísticas de conciliación */
+.reconcile-stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .reconcile-stats-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.reconcile-stat-card {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reconcile-stat-card.stat-green {
+  border-left: 4px solid #10b981;
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.reconcile-stat-card.stat-orange {
+  border-left: 4px solid #f97316;
+  background-color: rgba(249, 115, 22, 0.02);
+}
+
+.reconcile-stat-card.stat-blue {
+  border-left: 4px solid #3b82f6;
+  background-color: rgba(59, 130, 246, 0.02);
+}
+
+.reconcile-stat-card.stat-red {
+  border-left: 4px solid #ef4444;
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+.reconcile-stat-card span {
+  font-size: 0.72rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.reconcile-stat-card strong {
+  font-size: 1.25rem;
+  color: #111827;
+  font-weight: 800;
+}
+
+/* Filtros rápidos de pareo */
+.filter-tags-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-tag-btn {
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-tag-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.filter-tag-btn.active {
+  background-color: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+/* Tabla de Reconciliación */
+.reconcile-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.reconcile-table th {
+  background-color: #f9fafb;
+  padding: 10px 12px;
+  font-weight: 700;
+  color: #4b5563;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.reconcile-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+.reconcile-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.reconcile-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Badges de Estado */
+.match-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.match-status-badge.exact {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #047857;
+}
+
+.match-status-badge.discrepancy {
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #c2410c;
+}
+
+.match-status-badge.missing_pos {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #1d4ed8;
+}
+
+.match-status-badge.missing_crm {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #b91c1c;
+}
+
+.phone-email-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.diff-amount {
+  font-weight: 700;
+}
+
+.diff-amount.positive { color: #ef4444; }
+.diff-amount.negative { color: #3b82f6; }
+.diff-amount.zero { color: #10b981; }
+
+/* =========================================================
+   DISEÑO DEL PANEL DETALLADO DE RESOLUCIÓN (SIDE DRAWER)
+   ========================================================= */
+.crm-detail-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeInBackdrop 0.2s ease-out;
+}
+
+@keyframes fadeInBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.crm-detail-drawer {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  height: 100%;
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  animation: slideInLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #111827;
+  font-weight: 700;
+}
+
+.close-drawer-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  transition: all 0.2s;
+}
+
+.close-drawer-btn:hover {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.drawer-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.drawer-subtitle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.drawer-subtitle-section .label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* Comparador Side-by-side */
+.comparison-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comparison-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.comparison-box.crm-box { border-left: 4px solid #f2c811; }
+.comparison-box.pos-box { border-left: 4px solid #10b981; }
+
+.comparison-box-title {
+  background-color: #f9fafb;
+  padding: 8px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 0.8rem;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row .field-lbl {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.comparison-row .field-val {
+  color: #111827;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.comparison-row .field-val.highlight-mismatch {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Panel de Resoluciones */
+.resolutions-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resolutions-panel h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.88rem;
+  color: #374151;
+  font-weight: 700;
+}
+
+.resolution-option-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  background: none;
+  width: 100%;
+}
+
+.resolution-option-card:hover {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.resolution-option-card h5 {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #111827;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resolution-option-card p {
+  margin: 0;
+  font-size: 0.72rem;
+  color: #6b7280;
+  line-height: 1.3;
+}
+
+.resolution-option-card.action-danger:hover {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.02);
+}
+
+/* =========================================================
+   PESTAÑA 2: VISUALIZADOR POWER BI SIMULADO
+   ========================================================= */
+.pbi-iframe-simulator {
+  background-color: #eaeaea;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado superior de Power BI */
+.pbi-toolbar-top {
+  background-color: #111111;
+  color: #ffffff;
+  height: 42px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-bottom: 1px solid #222222;
+}
+
+.pbi-logo-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.pbi-logo-icon-svg {
+  width: 14px;
+  height: 14px;
+  background-color: #f2c811;
+  border-radius: 2px;
+}
+
+.pbi-report-title {
+  color: #e5e7eb;
+}
+
+.pbi-actions-top {
+  display: flex;
+  gap: 12px;
+  color: #9ca3af;
+}
+
+.pbi-actions-top span:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Cuerpo del Reporte */
+.pbi-report-viewport {
+  background-color: #f3f2f1; /* Color de fondo típico de Power BI */
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  min-height: 580px;
+  position: relative;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .pbi-report-viewport {
+    flex-direction: row;
+  }
+}
+
+/* Panel de Filtros Derecho */
+.pbi-filters-drawer {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e1dfdd;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+@media (min-width: 1024px) {
+  .pbi-filters-drawer {
+    width: 220px;
+    flex-shrink: 0;
+  }
+}
+
+.pbi-filters-drawer h4 {
+  font-size: 0.8rem;
+  color: #323130;
+  margin: 0;
+  font-weight: 700;
+  border-bottom: 1px solid #e1dfdd;
+  padding-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pbi-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pbi-filter-group label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #605e5c;
+}
+
+.pbi-filter-select {
+  padding: 6px;
+  border: 1px solid #a19f9d;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  background-color: #ffffff;
+  color: #323130;
+  outline: none;
+}
+
+.pbi-filter-select:focus {
+  border-color: #f2c811;
+}
+
+/* Lienzo del Reporte (Dashboard) */
+.pbi-canvas {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Fila de Tarjetas KPI de Power BI */
+.pbi-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .pbi-kpi-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pbi-kpi-card {
+  background-color: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+}
+
+.pbi-kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f2c811; /* Barra amarilla de Power BI */
+}
+
+.pbi-kpi-card span {
+  font-size: 0.7rem;
+  color: #605e5c;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.pbi-kpi-card strong {
+  font-size: 1.35rem;
+  color: #323130;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+/* Fila de Gráficos de Power BI */
+.pbi-charts-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 1200px) {
+  .pbi-charts-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pbi-chart-card {
+  background-color: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 280px;
+}
+
+.pbi-chart-card h4 {
+  font-size: 0.82rem;
+  color: #323130;
+  margin: 0;
+  font-weight: 700;
+  border-bottom: 1px solid #f3f2f1;
+  padding-bottom: 8px;
+}
+
+/* Gráfico de Barras CSS */
+.bar-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.bar-chart-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.72rem;
+}
+
+.bar-chart-label {
+  width: 100px;
+  color: #323130;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bar-chart-track {
+  flex-grow: 1;
+  background-color: #f3f2f1;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.bar-chart-fill {
+  background-color: #f2c811; /* Color principal */
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bar-chart-value {
+  width: 80px;
+  text-align: right;
+  font-weight: 700;
+  color: #323130;
+}
+
+/* Gráfico de Líneas/Tendencia CSS */
+.trend-chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.trend-bars-wrapper {
+  display: flex;
+  height: 160px;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-bottom: 1px solid #a19f9d;
+  padding-bottom: 4px;
+}
+
+.trend-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12%;
+}
+
+.trend-bar-fill {
+  background-color: #10b981; /* Verde Rofex */
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.6s ease;
+  min-height: 4px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.trend-bar-fill:hover {
+  filter: brightness(0.9);
+}
+
+.trend-tooltip {
+  position: absolute;
+  top: -24px;
+  background-color: #323130;
+  color: #ffffff;
+  font-size: 0.65rem;
+  padding: 2px 4px;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.trend-bar-fill:hover .trend-tooltip {
+  opacity: 1;
+}
+
+.trend-label {
+  margin-top: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #605e5c;
+}
+
+/* =========================================================
+   EMBUDO DE CONVERSIÓN DE LEADS (CSS AVANZADO)
+   ========================================================= */
+.funnel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.funnel-stage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 38px;
+}
+
+.funnel-stage-label {
+  width: 130px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #323130;
+}
+
+.funnel-stage-bar {
+  flex-grow: 1;
+  background-color: #f3f2f1;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+}
+
+.funnel-stage-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.funnel-stage-text {
+  position: relative;
+  z-index: 2;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.funnel-stage-value {
+  width: 60px;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #323130;
+  margin-left: 10px;
+}
+
+/* Colores de las fases del embudo */
+.funnel-fill-1 { background-color: rgba(59, 130, 246, 0.25); border-left: 4px solid #3b82f6; }
+.funnel-fill-2 { background-color: rgba(168, 85, 247, 0.25); border-left: 4px solid #a855f7; }
+.funnel-fill-3 { background-color: rgba(249, 115, 22, 0.25); border-left: 4px solid #f97316; }
+.funnel-fill-4 { background-color: rgba(16, 185, 129, 0.25); border-left: 4px solid #10b981; }
+
+/* =========================================================
+   MAPA GEOGRÁFICO DE CHILE SIMULADO (SVG INTEGRADO)
+   ========================================================= */
+.map-visual-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .map-visual-container {
+    grid-template-columns: 130px 1fr;
+  }
+}
+
+.svg-map-wrapper {
+  background-color: #f9fafb;
+  border: 1px solid #e1dfdd;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-commune-path {
+  fill: #e5e7eb;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.map-commune-path:hover {
+  fill: #f2c811;
+}
+
+.map-commune-path.active {
+  fill: #10b981;
+}
+
+.commune-tooltip-trigger {
+  cursor: pointer;
+}
+
+.commune-tooltip-trigger:hover circle {
+  fill: #f2c811;
+  stroke-width: 4;
+}
+
+.communes-stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.commune-stat-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  padding: 6px 8px;
+  background-color: #fcfcfc;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+}
+
+.commune-stat-item strong {
+  color: #323130;
+}
+
+/* Tabla de Detalle Interna de Power BI */
+.pbi-table-card {
+  background-color: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.pbi-table-card h4 {
+  font-size: 0.82rem;
+  color: #323130;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.pbi-inner-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.pbi-inner-table th {
+  background-color: #faf9f8;
+  padding: 8px;
+  font-weight: 700;
+  color: #323130;
+  border-bottom: 2px solid #e1dfdd;
+}
+
+.pbi-inner-table td {
+  padding: 8px;
+  border-bottom: 1px solid #f3f2f1;
+}
+
+/* Barra inferior del visualizador Power BI (Pestañas de páginas) */
+.pbi-footer-pages {
+  background-color: #eaeaea;
+  border-top: 1px solid #cccccc;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 1px;
+}
+
+.pbi-page-tab {
+  background-color: #eaeaea;
+  border: none;
+  height: 100%;
+  padding: 0 16px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #555555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-right: 1px solid #dcdcdc;
+}
+
+.pbi-page-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.pbi-page-tab.active {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* =========================================================
+   PESTAÑA 3: INFORMACIÓN DE INTEGRACIÓN Y CONFIGURACIÓN
+   ========================================================= */
+.integration-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.integration-card h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-item {
+  display: flex;
+  gap: 14px;
+}
+
+.step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f2c811;
+  color: #111827;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.step-body h4 {
+  font-size: 0.88rem;
+  color: #111827;
+  margin: 0;
+  font-weight: 700;
+}
+
+.step-body p {
+  font-size: 0.82rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.connection-details-box {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-family: monospace;
+  font-size: 0.78rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin-top: 6px;
+}
+
+.connection-details-box span {
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.connection-details-box code {
+  color: #111827;
+  word-break: break-all;
+}
+
+/* =========================================================
+   ELEMENTOS DE INTERFAZ COMUNES Y AJUSTES DE TEMA OSCURO
+   ========================================================= */
+
+/* Estilos de botones */
+.btn-primary.btn-yellow {
+  background-color: #f2c811;
+  color: #111827;
+  border: none;
+}
+
+.btn-primary.btn-yellow:hover {
+  background-color: #dcb50b;
+}
+
+/* Modo oscuro adaptado */
+.dark-mode .crm-pbi-header,
+.dark-mode .importer-card,
+.dark-mode .results-card,
+.dark-mode .reconcile-stat-card,
+.dark-mode .integration-card,
+.dark-mode .crm-detail-drawer,
+.dark-mode .drawer-subtitle-section {
+  background-color: #1f2937;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .crm-pbi-header h2,
+.dark-mode .importer-card h3,
+.dark-mode .results-card h3,
+.dark-mode .results-header-row h3,
+.dark-mode .reconcile-stat-card strong,
+.dark-mode .integration-card h3,
+.dark-mode .step-body h4,
+.dark-mode .connection-details-box code,
+.dark-mode .drawer-header h3,
+.dark-mode .comparison-row .field-val,
+.dark-mode .resolution-option-card h5 {
+  color: #f9fafb;
+}
+
+.dark-mode .crm-tabs {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .crm-tab-btn {
+  color: #9ca3af;
+}
+
+.dark-mode .crm-tab-btn:hover {
+  color: #10b981;
+}
+
+.dark-mode .crm-tab-btn.active {
+  color: #10b981;
+  border-bottom-color: #10b981;
+}
+
+.dark-mode .rules-panel,
+.dark-mode .comparison-box-title,
+.dark-mode .comparison-row {
+  background-color: #1a222f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .rules-panel h4 {
+  color: #d1d5db;
+}
+
+.dark-mode .rule-item {
+  color: #9ca3af;
+}
+
+.dark-mode .dropzone-crm {
+  background-color: #1a222f;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .dropzone-crm p {
+  color: #d1d5db;
+}
+
+.dark-mode .reconcile-stat-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .reconcile-stat-card span {
+  color: #9ca3af;
+}
+
+.dark-mode .reconcile-table th {
+  background-color: #1a222f;
+  color: #d1d5db;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .reconcile-table td {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .reconcile-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.dark-mode .filter-tag-btn {
+  background-color: #374151;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #d1d5db;
+}
+
+.dark-mode .filter-tag-btn:hover {
+  background-color: #4b5563;
+}
+
+.dark-mode .filter-tag-btn.active {
+  background-color: #10b981;
+  color: #111827;
+  border-color: #10b981;
+}
+
+.dark-mode .connection-details-box {
+  background-color: #1a222f;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .connection-details-box span {
+  color: #9ca3af;
+}
+
+.dark-mode .step-body p,
+.dark-mode .comparison-row .field-lbl {
+  color: #d1d5db;
+}
+
+.dark-mode .or-divider::before,
+.dark-mode .or-divider::after {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .comparison-box {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .resolution-option-card {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .resolution-option-card p {
+  color: #9ca3af;
+}
+
+.dark-mode .resolution-option-card:hover {
+  background-color: rgba(16, 185, 129, 0.04);
+}

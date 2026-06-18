@@ -1,0 +1,149 @@
+/* Estilos para Pedidos Web */
+
+.web-orders-view-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.web-orders-view-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.web-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.web-order-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+  transition: border-color 0.2s;
+}
+
+.web-order-card.pending {
+  border-left: 4px solid #10b981; /* Verde Rofex */
+}
+
+.web-order-card.completed {
+  border-left: 4px solid var(--border-color);
+  opacity: 0.85;
+}
+
+.web-order-card.cancelled {
+  border-left: 4px solid #ef4444;
+  opacity: 0.6;
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-id-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+}
+
+.status-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.status-pill.pending { background: rgba(16, 185, 129, 0.08); color: #059669; }
+.status-pill.completed { background: rgba(0,0,0,0.05); color: var(--text-secondary); }
+.status-pill.cancelled { background: rgba(239, 68, 68, 0.08); color: #dc2626; }
+
+.card-middle-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 14px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.info-item strong {
+  color: var(--text-primary);
+}
+
+.date-text {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.order-items-summary {
+  grid-column: 1 / -1;
+  background: var(--bg-body);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-items-summary strong {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.order-items-summary p {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.card-bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-block {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.order-total-block strong {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #10b981;
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 8px;
+}
+
+.text-red-btn {
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.1);
+}
+
+.text-red-btn:hover {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: #ef4444;
+}

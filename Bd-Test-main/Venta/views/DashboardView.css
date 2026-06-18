@@ -1,0 +1,347 @@
+/* Estilos para el Dashboard principal estilo Rofex */
+
+.dashboard-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Banner de Renovación Próxima */
+.renovacion-banner {
+  background: #d97706; /* Naranja medio oscuro */
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.15);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.banner-clock-icon {
+  background: rgba(255, 255, 255, 0.15);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-text h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.banner-text p {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  margin: 2px 0 0 0;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-email-icon {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-email-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-whatsapp-renew {
+  background: #111827; /* Dark slate */
+  color: #fbbf24; /* Yellow orange */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.btn-whatsapp-renew:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+/* Header del Dashboard */
+.dashboard-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-title-block h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.subtitle-block {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.range-selector-tabs {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  gap: 2px;
+  border: 1px solid var(--border-color);
+}
+
+.range-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.range-tab:hover {
+  color: var(--text-primary);
+}
+
+.range-tab.active {
+  background: #ffffff;
+  color: #059669; /* Verde Rofex activo */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  font-weight: 700;
+}
+
+/* Grilla de Métricas */
+.metrics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.metric-summary-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.01);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-summary-card.hover-card {
+  cursor: pointer;
+}
+
+.metric-summary-card.hover-card:hover {
+  transform: translateY(-2px);
+  border-color: #10b981;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.06);
+}
+
+.metric-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.2px;
+}
+
+.card-icon {
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.icon-emerald { color: #10b981; }
+.icon-yellow { color: #eab308; }
+.icon-red { color: #ef4444; }
+.icon-blue { color: #3b82f6; }
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.card-value.utility-color {
+  color: #eab308; /* Utilidad en color amarillo/dorado */
+}
+
+.card-value.critical-color {
+  color: #ef4444; /* Stock crítico en color rojo */
+}
+
+.card-value.text-blue-card {
+  color: #10b981; /* O verde Rofex en tickets */
+}
+
+.card-sub-info {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.card-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.metric-summary-card:hover .card-link-btn {
+  color: #10b981;
+}
+
+/* Tarjeta del Gráfico */
+.chart-wrapper-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart-card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.chart-card-header .period-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* SVG y Tooltips */
+.svg-container-relative {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+
+.sales-curve-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-data-circle {
+  cursor: pointer;
+  transition: r 0.1s ease;
+}
+
+.chart-data-circle:hover {
+  r: 8;
+}
+
+/* Tooltip sobre el gráfico */
+.chart-tooltip {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  background: #111827;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.chart-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #111827 transparent;
+}
+
+.tooltip-label {
+  opacity: 0.7;
+  font-size: 0.65rem;
+}
+
+.tooltip-value {
+  margin-top: 1px;
+}
+
+/* Eje X */
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 44px;
+  border-top: 1px solid rgba(0,0,0,0.03);
+  padding-top: 10px;
+}
+
+.x-label-item {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}

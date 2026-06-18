@@ -1,0 +1,325 @@
+{
+  "postgres_products": [
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d01",
+      "sku": "ALM-001",
+      "name": "Almendras Non Pareil 2026 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 6990,
+      "stock": 99.75,
+      "description": "Almendras seleccionadas cosechadas frescas.",
+      "image_url": "almonds"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d02",
+      "sku": "NUE-001",
+      "name": "Nuez mariposa light 2026 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 6690,
+      "stock": 120,
+      "description": "Nuez mariposa extra light de calidad premium.",
+      "image_url": "nuts"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d03",
+      "sku": "CAS-001",
+      "name": "Castaña de cajú tostada s/sal 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 7990,
+      "stock": 90,
+      "description": "Castañas de cajú tostadas sin sal crujientes.",
+      "image_url": "cashews"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d04",
+      "sku": "PIS-001",
+      "name": "Pistacho c/cascara sin sal 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 8990,
+      "stock": 70,
+      "description": "Pistachos con cáscara tostados sin sal de alta selección.",
+      "image_url": "nuts"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d05",
+      "sku": "MAN-001",
+      "name": "Maní tostado s/sal 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 2490,
+      "stock": 150,
+      "description": "Maní tostado natural sin sal.",
+      "image_url": "other"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d06",
+      "sku": "MAN-002",
+      "name": "Maní Japones 500 Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 3490,
+      "stock": 110,
+      "description": "Crujiente maní japonés tradicional.",
+      "image_url": "other"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d07",
+      "sku": "COC-001",
+      "name": "Coco rallado 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 3790,
+      "stock": 80,
+      "description": "Coco rallado deshidratado natural.",
+      "image_url": "dehydrated"
+    },
+    {
+      "id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d08",
+      "sku": "PAS-001",
+      "name": "Pasas ámbar 500Gr / 1Kg",
+      "sell_type": "weight",
+      "price": 2990,
+      "stock": 130,
+      "description": "Pasas ámbar seleccionadas dulces y jugosas.",
+      "image_url": "dehydrated"
+    }
+  ],
+  "mongodb_product_details": [
+    {
+      "sku": "ALM-001",
+      "category": "almendras",
+      "origin": "Región Metropolitana, Chile",
+      "nutrition": {
+        "calories": 579,
+        "carbohydrates": 22,
+        "protein": 21,
+        "fat": 49,
+        "fiber": 12
+      },
+      "allergens": [
+        "almendras"
+      ],
+      "tags": [
+        "Natural",
+        "Keto",
+        "Fibra"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.9,
+      "reviews_count": 48
+    },
+    {
+      "sku": "NUE-001",
+      "category": "nueces",
+      "origin": "Valle del Maipo, Chile",
+      "nutrition": {
+        "calories": 654,
+        "carbohydrates": 14,
+        "protein": 15,
+        "fat": 65,
+        "fiber": 7
+      },
+      "allergens": [
+        "nueces"
+      ],
+      "tags": [
+        "Premium",
+        "Light",
+        "Keto"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.8,
+      "reviews_count": 34
+    },
+    {
+      "sku": "CAS-001",
+      "category": "anacardos",
+      "origin": "Brasil",
+      "nutrition": {
+        "calories": 553,
+        "carbohydrates": 30,
+        "protein": 18,
+        "fat": 44,
+        "fiber": 3
+      },
+      "allergens": [
+        "anacardos"
+      ],
+      "tags": [
+        "Tostado",
+        "Sin Sal",
+        "Premium"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.7,
+      "reviews_count": 29
+    },
+    {
+      "sku": "PIS-001",
+      "category": "nueces",
+      "origin": "Chile",
+      "nutrition": {
+        "calories": 562,
+        "carbohydrates": 28,
+        "protein": 20,
+        "fat": 45,
+        "fiber": 10
+      },
+      "allergens": [
+        "pistachos"
+      ],
+      "tags": [
+        "Natural",
+        "Sin Sal"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.8,
+      "reviews_count": 41
+    },
+    {
+      "sku": "MAN-001",
+      "category": "otros",
+      "origin": "Chile",
+      "nutrition": {
+        "calories": 567,
+        "carbohydrates": 16,
+        "protein": 26,
+        "fat": 49,
+        "fiber": 9
+      },
+      "allergens": [
+        "maní"
+      ],
+      "tags": [
+        "Natural",
+        "Sin Sal"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.6,
+      "reviews_count": 22
+    },
+    {
+      "sku": "MAN-002",
+      "category": "otros",
+      "origin": "Chile",
+      "nutrition": {
+        "calories": 520,
+        "carbohydrates": 34,
+        "protein": 14,
+        "fat": 30,
+        "fiber": 5
+      },
+      "allergens": [
+        "maní",
+        "trigo"
+      ],
+      "tags": [
+        "Crujiente",
+        "Snack"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.7,
+      "reviews_count": 31
+    },
+    {
+      "sku": "COC-001",
+      "category": "deshidratados",
+      "origin": "Ecuador",
+      "nutrition": {
+        "calories": 354,
+        "carbohydrates": 15,
+        "protein": 3.3,
+        "fat": 33,
+        "fiber": 9
+      },
+      "allergens": [],
+      "tags": [
+        "Natural",
+        "Sin Azúcar"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.9,
+      "reviews_count": 38
+    },
+    {
+      "sku": "PAS-001",
+      "category": "deshidratados",
+      "origin": "Chile",
+      "nutrition": {
+        "calories": 299,
+        "carbohydrates": 79,
+        "protein": 3,
+        "fat": 0.5,
+        "fiber": 3.7
+      },
+      "allergens": [],
+      "tags": [
+        "Dulce",
+        "Energía"
+      ],
+      "packaging_info": "Bolsa hermética resellable.",
+      "rating": 4.8,
+      "reviews_count": 26
+    }
+  ],
+  "postgres_orders": [
+    {
+      "id": "ord_pc36tgg1y",
+      "total_amount": 1748,
+      "payment_method": "credit",
+      "created_at": "2026-06-18T21:58:31.707Z",
+      "closure_id": null,
+      "customer_name": "Alexis ortega",
+      "customer_email": "alexisortega1928@gmail.com",
+      "customer_phone": "+56968592039",
+      "shipping_address": "General mora 4477",
+      "shipping_city": "Santiago",
+      "status": "pending"
+    }
+  ],
+  "postgres_order_items": [
+    {
+      "id": "oi_qm0mst1c1",
+      "order_id": "ord_pc36tgg1y",
+      "product_id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d01",
+      "quantity": 0.25,
+      "price": 6990,
+      "created_at": "2026-06-18T21:58:31.707Z"
+    }
+  ],
+  "mongodb_orders_analytics": [
+    {
+      "order_id": "ord_pc36tgg1y",
+      "customer_name": "Alexis ortega",
+      "customer_email": "alexisortega1928@gmail.com",
+      "customer_phone": "+56968592039",
+      "shipping_address": "General mora 4477",
+      "shipping_city": "Santiago",
+      "total_amount": 1748,
+      "payment_method": "credit",
+      "created_at": "2026-06-18T21:58:31.707Z",
+      "status": "pending",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+      "ip_address": "::1",
+      "items": [
+        {
+          "product_id": "4a945d8b-cb61-4c6e-82b5-e656e18f2d01",
+          "quantity": 0.25,
+          "price": 6990
+        }
+      ]
+    }
+  ],
+  "site_content": {
+    "footer": {
+      "title": "+56 9 4919 6390",
+      "subtitle": "ventas@chilefrutossecos.cl",
+      "description": "Tarjetas bancarias, transferencias o pagos contra entrega (paga después de recibir sus productos) en RM. Tenemos boleta o factura. Hasta 3 cuotas sin interés.",
+      "button_primary_text": "Santiago, Chile",
+      "button_url": "Lunes a Viernes: 09:00 - 18:00",
+      "image_url": "Chile frutos Secos"
+    },
+    "about_us": {
+      "title": "Chile Frutos Secos",
+      "subtitle": "Calidad, frescura y compromiso directo a tu hogar",
+      "description": "Somos una empresa chilena dedicada a la selección y distribución de frutos secos del mercado. Brindamos un servicio premium de venta online y mayorista."
+    }
+  }
+}
